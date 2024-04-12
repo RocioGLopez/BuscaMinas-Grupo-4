@@ -16,6 +16,8 @@ private:
 	int aleatorio_en_rango(int minimo, int maximo);
 	int filaAleatoria();
 	int columnaAleatoria();
+	int vidas();
+
 
 	//atributos publicos
 public:
