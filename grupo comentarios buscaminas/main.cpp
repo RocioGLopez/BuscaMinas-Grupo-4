@@ -21,6 +21,9 @@ int main()//inicio del programa principal
     Config configuracionJuego(FILASTABLERO, COLUMNASTABLERO, MINASENTABLERO, MODODESARROLLADOR, VIDASTABLERO);
     //Creacion de objeto Juego llamado juego, usando como argumentos los metodos get de configuracion juego,
     Juego juego(Tablero(configuracionJuego.getfilasTablero(), configuracionJuego.getcolumnasTablero(), configuracionJuego.getmodoDesarrolladorTablero()), configuracionJuego.getminasTablero());
+    juego.dibujarPortada("portada2.txt");
+
+
     srand(getpid());
     //variable entera para opciones
     int opciones;

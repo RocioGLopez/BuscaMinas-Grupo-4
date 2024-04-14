@@ -173,3 +173,38 @@
 	<sstream>
 	<iostream>
 
+1712788663 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\buscaminas-grupo-4\grupo comentarios buscaminas\src\celda.cpp
+	"Celda.h"
+	<iostream>
+
+1712788663 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\buscaminas-grupo-4\grupo comentarios buscaminas\include\celda.h
+
+1712788663 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\buscaminas-grupo-4\grupo comentarios buscaminas\src\config.cpp
+	<iostream>
+	<unistd.h>
+	"Config.h"
+
+1712788663 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\buscaminas-grupo-4\grupo comentarios buscaminas\include\config.h
+
+1712788663 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\buscaminas-grupo-4\grupo comentarios buscaminas\src\tablero.cpp
+	"Tablero.h"
+	<sstream>
+	<iostream>
+
+1712788663 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\buscaminas-grupo-4\grupo comentarios buscaminas\include\tablero.h
+	<iostream>
+	<vector>
+	"Celda.h"
+
+1712960559 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\buscaminas-grupo-4\grupo comentarios buscaminas\src\juego.cpp
+	"Juego.h"
+	<fstream>
+	<unistd.h>
+	<fstream>
+	"Jugador.h"
+
+1712790510 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\buscaminas-grupo-4\grupo comentarios buscaminas\include\juego.h
+	"Tablero.h"
+
+1712790508 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\buscaminas-grupo-4\grupo comentarios buscaminas\include\jugador.h
+
