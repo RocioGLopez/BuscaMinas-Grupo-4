@@ -1,35 +1,45 @@
-#ifndef CONFIG_H
-#define CONFIG_H
+//estas directivas se aseguran que el encabezado CONFI_H solo se incluya 1 vez durante la compilacion
+#ifndef CONFIG_H//directiva para verificar si el simbolo CONFI_H no ha sido definido antes
+#define CONFIG_H//directiva para definir el simbolo CONFI_H
 
-// Declaración de la clase Config
-class Config//
+
+//interfaz de la clase Confi.h, prototipo de funciones utilizados para crear y administrar la configuracion del juego
+
+class Config
 {
-public:
-    // Constructor de la clase Config que recibe varios parámetros para inicializar los valores de configuración
-    Config(int filasTablero, int columnasTablero, int minasTablero, bool modoDesarrollador, int vidasTablero);
+    //atributos publicos
+    public:
+        //contructor unico que tiene 5 parametros que deben definirse al momento de uso
+        Config(int filasTablero, int columnasTablero, int minasTablero, bool modoDesarrolladorTablero, int vidasTablero);
 
-    // Métodos de acceso para obtener los valores de las variables miembro
-    int getFilasTablero() const; // Obtiene el número de filas del tablero
-    int getColumnasTablero() const; // Obtiene el número de columnas del tablero
-    int getMinasTablero() const; // Obtiene el número de minas del tablero
-    bool getModoDesarrollador() const; // Obtiene el estado del modo desarrollador
-    int getVidasTablero() const; // Obtiene el número de vidas del tablero
+        //metodos que se utilizaran como base, parte de la interfaz del header Confi.h
 
-    // Métodos mutadores para establecer los valores de las variables miembro
-    void setFilasTablero(int filasTablero); // Establece el número de filas del tablero
-    void setColumnasTablero(int columnasTablero); // Establece el número de columnas del tablero
-    void setMinasTablero(int minasTablero); // Establece el número de minas del tablero
-    void setModoDesarrollador(bool modoDesarrollador); // Establece el estado del modo desarrollador
-    void setVidasTablero(int vidasTablero); // Establece el número de vidas del tablero
+        int getfilasTablero();//Metodo set para establecer atributo de filasTablero entera
+        int setfilasTablero(int filasTablero);//Metodo get para obtener valor de atributo filasTablero entera
 
-private:
-    // Variables miembro que almacenan la configuración del juego
-    int filasTablero; // Número de filas del tablero
-    int columnasTablero; // Número de columnas del tablero
-    int minasTablero; // Número de minas del tablero
-    bool modoDesarrollador; // Estado del modo desarrollador
-    int vidasTablero; // Número de vidas del tablero
+        int getcolumnasTablero();//Metodo set para establecer atributo de columnasTablero entera
+        int setcolumnasTablero(int columnasTablero);//Metodo get para obtener valor de atributo columnasTablero entera
+
+        int getminasTablero();//Metodo set para establecer atributo de minasTablero entera
+        int setminasTablero(int minasTablero);//Metodo get para obtener valor de atributo minasTablero entera
+
+        bool getmodoDesarrolladorTablero();//Metodo set para establecer atributo de modoDesarrolladorTablero booleano
+        bool setmodoDesarrolladorTablero(bool modoDesarrolladorTablero);//Metodo get para obtener valor de atributo modoDesarrolladorTablero booleano
+
+        int getvidasTablero();//Metodo set para establecer atributo de vidasTablero entera
+        int setvidasTablero(int vidasTablero);//Metodo get para obtener valor de atributo vidasTablero entera
+
+        void menuConfiguracion();//metodo void que no devolvera valores, para entrar en el menu de configuracion
+
+    //atributos privados
+    private:
+
+        //definicion de variables
+        int filasTablero;
+        int columnasTablero;
+        int minasTablero;
+        bool modoDesarrolladorTablero;
+        int vidasTablero;
 };
 
-// Termina la definición de la clase y evita la inclusión múltiple del archivo de encabezado
 #endif // CONFIG_H

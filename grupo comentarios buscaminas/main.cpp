@@ -3,7 +3,7 @@
 #include <unistd.h>//libreria para habilitar funciones
 #include "Juego.h"//Archivo encabezado Juego.h para usar objetos
 #include "Config.h"//Archivo encabezado Confi.h para usar objetos
-
+#include "Jugador.h"//implentacion de clase Jugador.h
 using namespace std;//Direcctiva de espacio, para simplificar el std::, esto se compilara antes
 
 int main()//inicio del programa principal
@@ -21,14 +21,26 @@ int main()//inicio del programa principal
     Config configuracionJuego(FILASTABLERO, COLUMNASTABLERO, MINASENTABLERO, MODODESARROLLADOR, VIDASTABLERO);
     //Creacion de objeto Juego llamado juego, usando como argumentos los metodos get de configuracion juego,
     Juego juego(Tablero(configuracionJuego.getfilasTablero(), configuracionJuego.getcolumnasTablero(), configuracionJuego.getmodoDesarrolladorTablero()), configuracionJuego.getminasTablero());
-    juego.dibujarPortada("portada2.txt");
+    juego.dibujarPortada("portada1.txt");//con esto la variable juego trae la portada
 
 
     srand(getpid());
-    //variable entera para opciones
-    int opciones;
-    //variable boolena verdadera
-    bool repetir = true;
+
+    bool accesoJudador;
+    Jugador jugadorRegistro;
+    accesoJudador = jugadorRegistro.loginJugador();//metodo login de clase jugador
+    if (accesoJudador)
+    {
+        //variable entera para opciones
+        int opciones;
+        //variable boolena verdadera
+        bool repetir = true;
+
+
+
+
+
+
 
   //cilco do while para el menu
     do
@@ -38,7 +50,8 @@ int main()//inicio del programa principal
         cout << "\t\t-------------------"<< endl;
         cout << "\t\t1. Configuaracion del Juego" << endl;
         cout << "\t\t2. Iniciar el Juego" << endl;
-        cout << "\t\t3. Salir del Juego" << endl;
+        cout << "\t\t3. Ingresar Perfil de Jugador" << endl;
+        cout << "\t\t4. Salir del Juego" << endl;
         cout << "\n\t\tIngrese una opcion: ";
         cin >> opciones;
         //uso de switch para poder usar las opciones del menu
@@ -57,10 +70,22 @@ int main()//inicio del programa principal
                 system("pause");//
                 break;//cierra caso 2
             }
-        case 3: repetir = false;
+        case 3:
+            {
+                Jugador user;
+                user.menuJugador();
+                //Se crea una pausa
+                system("pause");
+                break;
+            }
+
+
+
+        case 4: repetir = false;
                 break;//cierra caso 3
         }
     } while (repetir);// while para repetir el menu hasta que de opcion 3 y cambie a falso
+    }
     system("cls");//limpia pantalla
     return 0;//fin del main
 }
