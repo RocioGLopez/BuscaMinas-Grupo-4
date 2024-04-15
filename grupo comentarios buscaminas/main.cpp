@@ -71,7 +71,7 @@ int main()//inicio del programa principal
                 break;//cierra caso 2
             }
         case 3:
-            {
+            {//implentacion de la clase jugador
                 Jugador user;
                 user.menuJugador();
                 //Se crea una pausa
